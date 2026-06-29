@@ -1,0 +1,30 @@
+/* styles.css — estilo minimal, color primario azul */
+:root{
+  --bg:#ffffff;
+  --text:#0f1720;
+  --muted:#6b7280;
+  --primary:#0ea5e9; /* azul claro */
+  --container-max:1100px;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg);color:var(--text);}
+.container{max-width:var(--container-max);margin:0 auto;padding:1rem}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.5rem 0}
+.brand{font-weight:700;color:var(--text);text-decoration:none}
+.nav a{margin-left:1rem;color:var(--muted);text-decoration:none}
+.nav a.cta{background:var(--primary);color:white;padding:0.4rem 0.7rem;border-radius:6px}
+.site-header{border-bottom:1px solid #e6eef2}
+.hero{display:flex;gap:1.5rem;align-items:center;padding:2rem 0}
+.avatar{width:140px;height:140px;border-radius:12px;border:4px solid #f1f7fb}
+.hero-text h1{margin:0 0 0.4rem 0}
+.hero-text p{margin:0 0.6rem 0 0;color:var(--muted)}
+.btn{display:inline-block;background:var(--primary);color:#fff;padding:0.6rem 0.9rem;border-radius:8px;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--primary);border:1px solid var(--primary)}
+.card{background:#ffffff;padding:1.25rem;border-radius:10px;margin:1rem 0;box-shadow:0 6px 18px rgba(12, 31, 46, 0.04)}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.project{padding:0.8rem;border-radius:8px;background:#fbfdff;border:1px solid #eef6fb}
+.site-footer{border-top:1px solid #eef3f6;padding:1.2rem 0;margin-top:2rem;text-align:center;color:var(--muted)}n
+@media (max-width:800px){
+  .hero{flex-direction:column;text-align:center}
+  .nav{display:none}
+}
